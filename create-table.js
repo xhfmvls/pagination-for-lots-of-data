@@ -9,7 +9,7 @@ const connCreds = {
   database: process.env.DBNAME
 };
 
-const createTable = async () => {
+const createTable = async() => {
   const tableName = process.argv[2] || 'MsProduct'; 
   const query = 
   `CREATE TABLE ${tableName} (
@@ -19,8 +19,9 @@ const createTable = async () => {
   brand_name VARCHAR(255) NOT NULL, 
   retail_price DECIMAL(15,2) NOT NULL, 
   active_status BOOL NOT NULL, 
-  updated_at TIMESTAMP NOT NULL, 
-  created_at TIMESTAMP NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW(),
+  deleted_at TIMESTAMP DEFAULT NULL,
   PRIMARY KEY(product_id))`;
 
   const conn = mysql.createConnection(connCreds);
