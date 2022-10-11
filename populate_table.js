@@ -24,7 +24,7 @@ const populateTable = async() => {
     const retail_price = faker.commerce.price();
     const active_status = faker.datatype.boolean();
 
-    const query = `INSERT INTO ${tableName}(product_id, product_name, category, brand_name, retail_price, active_status) VALUES('${product_id}', '${product_name}', '${category}', '${brand_name}', ${retail_price}, ${active_status})`;
+    const query = `INSERT INTO ${tableName}(product_id, product_name, category, brand_name, retail_price, active_status) VALUES("${product_id}", "${product_name}", "${category}", "${brand_name}", ${retail_price}, ${active_status})`;
     await conn.execute(query);
   }
 
