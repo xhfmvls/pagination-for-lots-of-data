@@ -12,7 +12,7 @@ const connCreds = {
 
 const populateTable = async() => {
   const totalData = process.argv[2] || 5;
-  const tableName = process.argv[3] || 'MsProduct'; 
+  const tableName = process.argv[3] || 'Products'; 
   const conn = await mysqlPromise.createConnection(connCreds);
   console.log('[+] Database Connected');
 

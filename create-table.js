@@ -10,7 +10,7 @@ const connCreds = {
 };
 
 const createTable = async() => {
-  const tableName = process.argv[2] || 'MsProduct'; 
+  const tableName = process.argv[2] || 'Products'; 
   const query = 
   `CREATE TABLE ${tableName} (
   product_id CHAR(36) NOT NULL, 
