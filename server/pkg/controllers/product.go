@@ -47,6 +47,8 @@ func GetPaginatedProductsList(w http.ResponseWriter, r *http.Request) {
 	}
 
 	res, _ := json.Marshal(response)
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "OPTIONS, GET, POST, PUT")
 	w.Header().Set("content-type", "pkglication/json")
 	w.WriteHeader(response.Code)
 	w.Write(res)
