@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/xhfmvls/pagination/pkg/middlewares"
 	"log"
 	"net/http"
 	"os"
@@ -14,7 +15,7 @@ import (
 )
 
 var NewRouter = func(router *mux.Router) {
-	router.HandleFunc("/product", controllers.GetPaginatedProductsList).Methods("GET")
+	router.Handle("/product", middlewares.Pagination(http.HandlerFunc(controllers.GetPaginatedProductsList))).Methods("GET")
 }
 
 func main() {
