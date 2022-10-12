@@ -17,9 +17,10 @@ type PageInfo struct {
 }
 
 type APIResponse struct {
-	Code int         `json:"code"`
-	Data interface{} `json:"data"`
-	Page PageInfo    `json:"pageinfo"`
+	Code    int         `json:"code"`
+	Message string      `json:"message"`
+	Data    interface{} `json:"data"`
+	Page    PageInfo    `json:"pageinfo"`
 }
 
 func GetPaginatedProductsList(w http.ResponseWriter, r *http.Request) {
@@ -38,9 +39,15 @@ func GetPaginatedProductsList(w http.ResponseWriter, r *http.Request) {
 	response.Code = http.StatusOK
 	response.Data = ProductsList
 	response.Page = pgInfo
+	response.Message = "Success"
+
+	if pgInfo.Current > pgInfo.TotalPages {
+		response.Code = http.StatusBadRequest
+		response.Message = "Page invalid"
+	}
 
 	res, _ := json.Marshal(response)
 	w.Header().Set("content-type", "pkglication/json")
-	w.WriteHeader(http.StatusOK)
+	w.WriteHeader(response.Code)
 	w.Write(res)
 }
