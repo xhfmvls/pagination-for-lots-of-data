@@ -22,6 +22,12 @@ func init() {
 	db.AutoMigrate(&Product{})
 }
 
+func GetSize() int {
+	count := 0
+	db.Model(&Product{}).Count(&count)
+	return count
+}
+
 func GetProducts(limit int, offset int) []Product {
 	var productsList []Product
 	db.Limit(limit).Offset(offset).Find(&productsList)
