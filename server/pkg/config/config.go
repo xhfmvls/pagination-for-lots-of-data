@@ -12,7 +12,7 @@ var db *gorm.DB
 
 func ConnectDB() {
 	godotenv.Load(".env")
-	dbUrl := os.Getenv("DB_URL")
+	dbUrl := os.Getenv("DBCONN")
 	if dbUrl == "" {
 		panic("URL not available")
 	}
