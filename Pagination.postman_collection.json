@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "fcfe2263-90e0-45ac-9f16-8852c0c6d1f6",
+		"name": "Pagination",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17856588"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API URL}}/product?limit=10",
+					"host": [
+						"{{API URL}}"
+					],
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API URL}}/product",
+							"host": [
+								"{{API URL}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS, GET, POST, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "pkglication/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Oct 2022 06:26:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1597"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": [],\n    \"pageinfo\": {\n        \"size\": 0,\n        \"total\": 0,\n        \"totalPages\": 0,\n        \"current\": 0\n    }\n}"
+				},
+				{
+					"name": "Get Products (with Limit)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API URL}}/product?limit=10",
+							"host": [
+								"{{API URL}}"
+							],
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS, GET, POST, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "pkglication/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Oct 2022 06:28:43 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1981"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"product_id\": \"00008782-693b-4d10-ae1a-4b2124c87ffb\",\n            \"product_name\": \"Small Metal Ball\",\n            \"category\": \"Ball\",\n            \"brand_name\": \"Rosenbaum LLC\",\n            \"retail_price\": 959,\n            \"active_status\": true\n        },\n        {\n            \"product_id\": \"0000fee4-93b6-4d18-8447-c75c48f699d8\",\n            \"product_name\": \"Licensed Metal Shirt\",\n            \"category\": \"Shirt\",\n            \"brand_name\": \"Schneider Group\",\n            \"retail_price\": 546,\n            \"active_status\": true\n        },\n        {\n            \"product_id\": \"0001362f-ec7d-497f-af90-e484e6ae7c20\",\n            \"product_name\": \"Elegant Soft Chicken\",\n            \"category\": \"Chicken\",\n            \"brand_name\": \"Bartoletti - Howell\",\n            \"retail_price\": 765,\n            \"active_status\": false\n        },\n        {\n            \"product_id\": \"0001b98e-0f6b-4b1e-84cc-492f99056cb3\",\n            \"product_name\": \"Small Fresh Keyboard\",\n            \"category\": \"Keyboard\",\n            \"brand_name\": \"Hermiston, Fahey and Mills\",\n            \"retail_price\": 623,\n            \"active_status\": false\n        },\n        {\n            \"product_id\": \"0001f387-0070-48a7-8176-d2972714892c\",\n            \"product_name\": \"Ergonomic Concrete Shirt\",\n            \"category\": \"Shirt\",\n            \"brand_name\": \"Bartoletti, Huels and Abbott\",\n            \"retail_price\": 255,\n            \"active_status\": true\n        },\n        {\n            \"product_id\": \"0001f74f-3fc3-4eb7-890d-e4d65738e8f3\",\n            \"product_name\": \"Oriental Plastic Chicken\",\n            \"category\": \"Chicken\",\n            \"brand_name\": \"Ward and Sons\",\n            \"retail_price\": 81,\n            \"active_status\": false\n        },\n        {\n            \"product_id\": \"0002394b-6666-469e-ad35-f82a4066dabc\",\n            \"product_name\": \"Rustic Bronze Bike\",\n            \"category\": \"Bike\",\n            \"brand_name\": \"Trantow and Sons\",\n            \"retail_price\": 485,\n            \"active_status\": true\n        },\n        {\n            \"product_id\": \"0002ac66-879c-4b67-8180-fd50b36ecf67\",\n            \"product_name\": \"Ergonomic Steel Tuna\",\n            \"category\": \"Tuna\",\n            \"brand_name\": \"Cummerata, Kemmer and Boyle\",\n            \"retail_price\": 401,\n            \"active_status\": true\n        },\n        {\n            \"product_id\": \"0002e3ae-02f2-4255-81da-f6c8c0b6bef0\",\n            \"product_name\": \"Gorgeous Plastic Salad\",\n            \"category\": \"Salad\",\n            \"brand_name\": \"Rempel and Sons\",\n            \"retail_price\": 953,\n            \"active_status\": false\n        },\n        {\n            \"product_id\": \"000329e6-2a74-495e-819c-265404b1931f\",\n            \"product_name\": \"Rustic Plastic Mouse\",\n            \"category\": \"Mouse\",\n            \"brand_name\": \"Kilback - Hilpert\",\n            \"retail_price\": 885,\n            \"active_status\": false\n        }\n    ],\n    \"pageinfo\": {\n        \"size\": 10,\n        \"total\": 200000,\n        \"totalPages\": 20000,\n        \"current\": 1\n    }\n}"
+				},
+				{
+					"name": "Get Products (with Limit and Page)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API URL}}/product?limit=8&page=10",
+							"host": [
+								"{{API URL}}"
+							],
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "8"
+								},
+								{
+									"key": "page",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS, GET, POST, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "pkglication/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Oct 2022 06:26:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1597"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"product_id\": \"001afc73-ae67-412f-909b-94be09282091\",\n            \"product_name\": \"Sleek Bronze Bacon\",\n            \"category\": \"Bacon\",\n            \"brand_name\": \"Lebsack Group\",\n            \"retail_price\": 133,\n            \"active_status\": true\n        },\n        {\n            \"product_id\": \"001b15fb-d7ae-454d-b37e-13722368a67d\",\n            \"product_name\": \"Intelligent Fresh Chair\",\n            \"category\": \"Chair\",\n            \"brand_name\": \"Fadel, Volkman and Senger\",\n            \"retail_price\": 538,\n            \"active_status\": true\n        },\n        {\n            \"product_id\": \"001b2a78-758f-47b6-a655-a14d615515d4\",\n            \"product_name\": \"Fantastic Wooden Pants\",\n            \"category\": \"Pants\",\n            \"brand_name\": \"Erdman, Borer and Zboncak\",\n            \"retail_price\": 741,\n            \"active_status\": false\n        },\n        {\n            \"product_id\": \"001b7fac-276b-4d9f-9696-a0f998fa146e\",\n            \"product_name\": \"Generic Bronze Shoes\",\n            \"category\": \"Shoes\",\n            \"brand_name\": \"Upton - Rogahn\",\n            \"retail_price\": 727,\n            \"active_status\": true\n        },\n        {\n            \"product_id\": \"001be318-ab40-4504-b0bf-50a6c598a118\",\n            \"product_name\": \"Tasty Bronze Bacon\",\n            \"category\": \"Bacon\",\n            \"brand_name\": \"Oberbrunner - Rolfson\",\n            \"retail_price\": 364,\n            \"active_status\": false\n        },\n        {\n            \"product_id\": \"001c8601-f498-4812-a463-87795b4aa4b5\",\n            \"product_name\": \"Modern Rubber Bacon\",\n            \"category\": \"Bacon\",\n            \"brand_name\": \"Goodwin - Ebert\",\n            \"retail_price\": 99,\n            \"active_status\": false\n        },\n        {\n            \"product_id\": \"001ce23b-138e-41db-ac91-2986e503e547\",\n            \"product_name\": \"Elegant Fresh Sausages\",\n            \"category\": \"Sausages\",\n            \"brand_name\": \"Abshire - Toy\",\n            \"retail_price\": 398,\n            \"active_status\": true\n        },\n        {\n            \"product_id\": \"001cf486-27a6-4e63-a55e-71e37524f8bd\",\n            \"product_name\": \"Unbranded Bronze Bike\",\n            \"category\": \"Bike\",\n            \"brand_name\": \"Nitzsche - Johnson\",\n            \"retail_price\": 50,\n            \"active_status\": false\n        }\n    ],\n    \"pageinfo\": {\n        \"size\": 8,\n        \"total\": 200000,\n        \"totalPages\": 25000,\n        \"current\": 10\n    }\n}"
+				},
+				{
+					"name": "Get Products (last Page)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API URL}}/product?limit=18&page=11112",
+							"host": [
+								"{{API URL}}"
+							],
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "18"
+								},
+								{
+									"key": "page",
+									"value": "11112"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS, GET, POST, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "pkglication/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 13 Oct 2022 06:29:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "491"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"product_id\": \"fffefeef-73e0-4448-891a-7c04cd4b6fae\",\n            \"product_name\": \"Elegant Cotton Fish\",\n            \"category\": \"Fish\",\n            \"brand_name\": \"Welch, Bednar and Adams\",\n            \"retail_price\": 242,\n            \"active_status\": false\n        },\n        {\n            \"product_id\": \"ffff6f80-1cb6-4c47-9933-dc4444b353df\",\n            \"product_name\": \"Practical Soft Computer\",\n            \"category\": \"Computer\",\n            \"brand_name\": \"Heller - Wehner\",\n            \"retail_price\": 974,\n            \"active_status\": true\n        }\n    ],\n    \"pageinfo\": {\n        \"size\": 18,\n        \"total\": 200000,\n        \"totalPages\": 11112,\n        \"current\": 11112\n    }\n}"
+				}
+			]
+		}
+	]
+}
