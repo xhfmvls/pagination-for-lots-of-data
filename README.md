@@ -64,7 +64,7 @@ DBCONN="<DATABASE USER NAME>:<DATABASE USER PASSWORD>@tcp(<HOST>:3306)/<DATABASE
 
 ### 6. Mem-populate table yang telah dibuat dengan menjalankan script <i>populate-table</i>.
 ```
-> node .\populate-table.js
+> node .\populate-table.js 200000
 ```
 
 ### 7. Menginstall semua package yang dibutuhkan pada folder server. (tidak perlu dilakukan bila sudah sebelumnya sudah diinstall)
