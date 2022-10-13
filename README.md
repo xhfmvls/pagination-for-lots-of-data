@@ -26,6 +26,10 @@ Go (Gorilla/Mux) Backend Service that supports pagination for a considerable amo
 5. Postman Documentation <br>
 [Postman Documentation Tutorial](https://www.softwaretestinghelp.com/postman-api-documentation/)
 
+6. Git <br>
+[Git Installation](https://github.com/git-guides/install-git)
+[Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+
 ## Setup and Running Documentation
 
 ### 1. Membuat local database yang akan digunakan menggunakan MySQL Server CLI. 
@@ -37,9 +41,14 @@ Enter Password: <DATABASE USER PASSWORD>
 mysql> CREATE DATABASE <DATABASE NAME>
 ```
 
-### 2. Membuat file `.env` di folder dimana file `.env.example` dapat ditemukan.
+### 2. Meng-clone file git dari repository ini. 
+```
+> git clone https://github.com/xhfmvls/pagination-for-lots-of-data.git
+```
 
-### 3. Mengisi enviromental variables pada `.env` sesuai (merujuk) dengan contoh pada `.env.example` di folder bersangkutan. 
+### 3. Membuat file `.env` di folder-folder dimana file `.env.example` dapat ditemukan (folder utama dan folder server).
+
+### 4. Mengisi enviromental variables pada `.env` sesuai (merujuk) dengan contoh pada `.env.example` di folder bersangkutan. 
 ```sh
 # Folder Utama
 DBHOST="<HOST>"
@@ -52,22 +61,22 @@ PORT=<SERVER PORT>
 DBCONN="<DATABASE USER NAME>:<DATABASE USER PASSWORD>@tcp(<HOST>:3306)/<DATABASE NAME>"
 ```
 
-### 4. Menginstall semua dependencies NPM dari folder utama. 
+### 5. Menginstall semua dependencies NPM dari folder utama. 
 ```
 > npm install
 ```
 
-### 5. Membuat table dengan menjalankan script <i>create-table</i>. 
+### 6. Membuat table dengan menjalankan script <i>create-table</i>. 
 ```
 > node .\create-table.js
 ```
 
-### 6. Mem-populate table yang telah dibuat dengan menjalankan script <i>populate-table</i>.
+### 7. Mem-populate table yang telah dibuat dengan menjalankan script <i>populate-table</i>.
 ```
 > node .\populate-table.js 200000
 ```
 
-### 7. Menginstall semua package yang dibutuhkan pada folder server. (tidak perlu dilakukan bila sudah sebelumnya sudah diinstall)
+### 8. Menginstall semua package yang dibutuhkan pada folder server. (tidak perlu dilakukan bila sudah sebelumnya sudah diinstall)
 ```
 > cd .\server\
 
@@ -77,21 +86,21 @@ DBCONN="<DATABASE USER NAME>:<DATABASE USER PASSWORD>@tcp(<HOST>:3306)/<DATABASE
 > go get -u github.com/joho/godotenv
 ```
 
-### 8. Menjalankan server (backend) dari aplikasi. 
+### 9. Menjalankan server (backend) dari aplikasi. 
 ```
 > cd .\server\
 
 > go run .\main.go
 ```
 
-### 9. Menginstall dependencies yang dibutuhkan pada folder client\product-view. 
+### 10. Menginstall dependencies yang dibutuhkan pada folder client\product-view. 
 ```
 > cd .\client\product-view\
 
 > npm install
 ```
 
-### 10. Menjalankan client (frontend) dari aplikasi. 
+### 11. Menjalankan client (frontend) dari aplikasi. 
 ```
 > cd .\client\product-view\
 
